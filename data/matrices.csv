@@ -1,0 +1,3 @@
+name,group,n,nnz,symmetry,kind,values_in_file,suitesparse_page,download_url,sha256
+bcsstk13,HB,2003,83883,symmetric,computational fluid dynamics problem,real,https://sparse.tamu.edu/HB/bcsstk13,https://math.nist.gov/pub/MatrixMarket2/Harwell-Boeing/bcsstruc1/bcsstk13.mtx.gz,4cc1206dce6081cd72065368f28c7beb093786c215f88c9d56b0dd6451779646
+bcsstk30,HB,28924,2043492,symmetric,structural problem,pattern (values set to 1.0),https://sparse.tamu.edu/HB/bcsstk30,https://math.nist.gov/pub/MatrixMarket2/Harwell-Boeing/bcsstruc5/bcsstk30.mtx.gz,02c69627a79ff7375200497dc90cc55ec28e74bccc75c5d4426c6dc174d75963

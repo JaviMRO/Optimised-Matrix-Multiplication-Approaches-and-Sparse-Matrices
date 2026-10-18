@@ -1,0 +1,27 @@
+# Maven build output
+target/
+
+# Real matrices: downloaded by data/fetch_suitesparse.* (checksums in data/matrices.csv)
+data/*.mtx
+data/*.mtx.gz
+data/*.tar.gz
+data/*/
+
+# Pipeline test runs (use --out-dir results/dryrun for quick checks)
+results/dryrun/
+
+# JVM crash logs
+hs_err_pid*.log
+replay_pid*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+desktop.ini

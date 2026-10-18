@@ -7,7 +7,7 @@ Write-Host ">> mvn clean verify (build + JUnit tests)"
 & mvn -B clean verify
 if ($LASTEXITCODE -ne 0) { throw "Build or tests failed: no benchmark was run." }
 
-$envId = New-EnvId
+$envId = New-EnvId $args
 & "$PSScriptRoot/run_dense.ps1" -EnvId $envId @args
 & "$PSScriptRoot/run_sparse.ps1" -EnvId $envId @args
 & "$PSScriptRoot/run_memory.ps1" -EnvId $envId @args

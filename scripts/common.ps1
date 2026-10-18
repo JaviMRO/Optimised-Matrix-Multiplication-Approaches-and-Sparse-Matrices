@@ -25,9 +25,9 @@ function Invoke-Suite([string[]]$SuiteArgs) {
 }
 
 # Writes env/<host>_<timestamp>.json (in a JVM with the benchmark flags) and returns its env_id.
-function New-EnvId {
+function New-EnvId([string[]]$ExtraArgs = @()) {
     Assert-Jar
-    $out = & java --enable-native-access=ALL-UNNAMED -cp $Jar $SuiteClass --env-only
+    $out = & java --enable-native-access=ALL-UNNAMED -cp $Jar $SuiteClass --env-only @ExtraArgs
     if ($LASTEXITCODE -ne 0) { throw "Environment collection failed" }
     $out | ForEach-Object { Write-Host $_ }
     return ($out | Select-Object -Last 1).Trim()
